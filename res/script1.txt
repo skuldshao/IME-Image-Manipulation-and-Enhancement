@@ -1,0 +1,30 @@
+Morning
+Load res/brunch.ppm brunch
+Load res/quincy.ppm quincy
+RedComponent quincy quincy-red-component
+Save res/quincy-red-component.ppm quincy-red-component
+GreenComponent quincy quincy-green-component
+Save res/quincy-green-component.ppm quincy-green-component
+BlueComponent quincy quincy-blue-component
+Save res/resquincy-blue-component.ppm quincy-blue-component
+ValueGreyScaleImage quincy quincy-value-grey-scale
+Save res/quincy-value-grey-scale.ppm  quincy-value-grey-scale
+IntensityGreyScaleImage quincy quincy-intensity-grey-scale
+Save res/quincy-intensity-grey-scale.ppm  quincy-intensity-grey-scale
+LumaGreyScaleImage quincy quincy-luma-grey-scale
+Save res/quincy-luma-grey-scale.ppm  quincy-luma-grey-scale
+Flip-horizontally quincy  quincy-horizontal-flip
+Save res/quincy-horizontal-flip.ppm quincy-horizontal-flip
+Flip-vertically quincy-horizontal-flip quincy-horizontal-vertical-flip
+Save res/quincy-horizontal-vertical-flip.ppm quincy-horizontal-vertical-flip
+Flip-vertically quincy quincy-vertical-flip
+Save res/quincy-vertical-flip.ppm quincy-vertical-flip
+Flip-horizontally  quincy-vertical-flip quincy-vertical-horizontal-flip
+Save res/quincy-vertical-horizontal-flip.ppm quincy-vertical-horizontal-flip
+Brighten -80 quincy quincy-brighten
+Brighten 80 quincy quincy-brighten
+Save res/quincy-brighten-by-80.ppm quincy-brighten
+Darken 40 quincy quincy-darken
+Darken -40 quincy quincy-darken
+Save res/quincy-darken-by-40.ppm quincy-darken
+Quit
