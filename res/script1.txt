@@ -1,30 +1,38 @@
 Morning
-Load res/brunch.ppm brunch
-Load res/quincy.ppm quincy
+Load res/brunch.png brunch
+Load res/quincy.jpg quincy
 RedComponent quincy quincy-red-component
+Save res/quincy-red-component.jpg quincy-red-component
 Save res/quincy-red-component.ppm quincy-red-component
+Load res/quincy.ppm quincy
 GreenComponent quincy quincy-green-component
-Save res/quincy-green-component.ppm quincy-green-component
+Save res/quincy-green-component.jpg quincy-green-component
 BlueComponent quincy quincy-blue-component
-Save res/resquincy-blue-component.ppm quincy-blue-component
+Save res/resquincy-blue-component.jpg quincy-blue-component
 ValueGreyScaleImage quincy quincy-value-grey-scale
-Save res/quincy-value-grey-scale.ppm  quincy-value-grey-scale
+Save res/quincy-value-grey-scale.jpg  quincy-value-grey-scale
 IntensityGreyScaleImage quincy quincy-intensity-grey-scale
-Save res/quincy-intensity-grey-scale.ppm  quincy-intensity-grey-scale
+Save res/quincy-intensity-grey-scale.jpg  quincy-intensity-grey-scale
 LumaGreyScaleImage quincy quincy-luma-grey-scale
-Save res/quincy-luma-grey-scale.ppm  quincy-luma-grey-scale
+Save res/quincy-luma-grey-scale.jpg  quincy-luma-grey-scale
 Flip-horizontally quincy  quincy-horizontal-flip
-Save res/quincy-horizontal-flip.ppm quincy-horizontal-flip
+Save res/quincy-horizontal-flip.jpg quincy-horizontal-flip
 Flip-vertically quincy-horizontal-flip quincy-horizontal-vertical-flip
-Save res/quincy-horizontal-vertical-flip.ppm quincy-horizontal-vertical-flip
+Save res/quincy-horizontal-vertical-flip.jpg quincy-horizontal-vertical-flip
 Flip-vertically quincy quincy-vertical-flip
-Save res/quincy-vertical-flip.ppm quincy-vertical-flip
+Save res/quincy-vertical-flip.jpg quincy-vertical-flip
 Flip-horizontally  quincy-vertical-flip quincy-vertical-horizontal-flip
-Save res/quincy-vertical-horizontal-flip.ppm quincy-vertical-horizontal-flip
+Save res/quincy-vertical-horizontal-flip.jpg quincy-vertical-horizontal-flip
 Brighten -80 quincy quincy-brighten
 Brighten 80 quincy quincy-brighten
-Save res/quincy-brighten-by-80.ppm quincy-brighten
+Save res/quincy-brighten-by-80.jpg quincy-brighten
 Darken 40 quincy quincy-darken
 Darken -40 quincy quincy-darken
-Save res/quincy-darken-by-40.ppm quincy-darken
-Quit
+Save res/quincy-darken-by-40.jpg quincy-darken
+Blur quincy blur-quincy
+Save res/blur-quincy.jpg blur-quincy
+Sharpen quincy sharpen-quincy
+Save res/sharpen-quincy.jpg sharpen-quincy
+Sepia quincy sepia-quincy
+Save res/sepia-quincy.jpg sepia-quincy
+Q
