@@ -6,11 +6,13 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.StringReader;
 import java.util.Scanner;
 import java.io.FileNotFoundException;
 import java.io.FileInputStream;
 
-import controller.TextScriptController;
+import controller.GuiViewControllerImpl;
+import controller.ImageEditorController;
 import controller.TextScriptControllerImpl;
 
 import javax.imageio.ImageIO;
@@ -21,6 +23,8 @@ import model.image.Image;
 import model.image.ImageImpl;
 import model.image.Pixel;
 import model.image.PixelImpl;
+import view.GUIView;
+import view.GuiViewWindow;
 
 
 /**
@@ -261,31 +265,54 @@ public class ImageUtil {
   }
 
   /**
-   * This is main method to run the image editor, the user to choose script or  text modes to
-   * interactive with the program.
+   * This is main method to run the image editor, the user to choose script or text modes to
+   * interactive with the program. The program also provides the GUI for the user to interactive
+   * with. If the user doesn't give an invalid command, the program would give that hint and shun
+   * down the program immediately.
    *
-   * @param args the commandline arguements to run this program
+   * @param args the commandline arguments to run this program
    */
   public static void main(String[] args) {
     ImageModel model = new ImageModelImpl();
     Appendable ap = System.out;
-    TextScriptController controller;
-    switch (args[0]) {
-      case "Text":
-        Readable rd = new InputStreamReader(System.in);
-        controller = new TextScriptControllerImpl(model, rd, ap);
-        controller.editImage();
+    ImageEditorController controller;
+    switch (args.length) {
+      case 2:
+        if (args[0].equalsIgnoreCase("-file")) {
+          String filepath = args[1];
+          File file = new File(filepath);
+          controller = new TextScriptControllerImpl(model, file, ap);
+          controller.editImage();
+          new TextScriptControllerImpl(model, new StringReader("q"), ap);
+        } else {
+          System.out.println("Invalid command.");
+          try {
+            Runtime.getRuntime().exec("pgrep '6.jar' | xargs kill");
+          } catch (Exception e) {
+            e.printStackTrace();
+          }
+        }
         break;
-      case "Script":
-        String filepath = args[1];
-        File file = new File(filepath);
-        controller = new TextScriptControllerImpl(model, file, ap);
-        controller.editImage();
+      case 1:
+        if (args[0].equalsIgnoreCase("-text")) {
+          Readable rd = new InputStreamReader(System.in);
+          controller = new TextScriptControllerImpl(model, rd, ap);
+          controller.editImage();
+        } else {
+          System.out.println("Invalid command!");
+          new TextScriptControllerImpl(model, new StringReader("q"), ap);
+        }
         break;
       default:
-        System.out.println("Invalid mode!");
+        GUIView view = new GuiViewWindow(model);
+        controller = new GuiViewControllerImpl(model, view);
+        controller.editImage();
         break;
     }
   }
 }
+
+
+
+
 
