@@ -74,12 +74,6 @@ For the sharpening and blurring. We created a new interface named filtering, whi
 
 ———
 
-
-
-
-
-[			]
-
 ‘Load image-path image-name’ 
 
 'RedComponent  image-name dest-image-name'  
@@ -109,8 +103,6 @@ For the sharpening and blurring. We created a new interface named filtering, whi
 ‘Sepia image-name dest-image-name’
 
 ` `'DownSize desired-width desired-height image-name dest-image-name' 
-
-[			]
 
 **Design Thought Process and Classes/ Interfaces Explained**
 
